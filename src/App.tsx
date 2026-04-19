@@ -1,10 +1,12 @@
 import './App.css'
 
+import { Header } from "@/components/layout/Header"
+
 function App() {
 
   return (
     <>
-      <h1>Hello CodeSandbox</h1>
+      <Header />
     </>
   )
 }
