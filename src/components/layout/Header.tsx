@@ -1,4 +1,4 @@
-// components/Header.tsx
+import { Link } from "react-router-dom"
 import {
     NavigationMenu,
     NavigationMenuList,
@@ -9,17 +9,20 @@ import {
 export function Header() {
     return (
         <header className="flex items-center justify-between px-6 py-3 border-b">
-            <a href="/" className="font-bold text-lg">MyLogo</a>
+            <Link to="/" className="font-bold text-lg">MyLogo</Link>
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="/">Home</NavigationMenuLink>
+                        <NavigationMenuLink render={<Link to="/" />}>Home</NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="/about">About</NavigationMenuLink>
+                        <NavigationMenuLink render={<Link to="/about" />}>About</NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <NavigationMenuLink href="/contact">Contact</NavigationMenuLink>
+                        <NavigationMenuLink render={<Link to="/contact" />}>Contact</NavigationMenuLink>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem>
+                        <NavigationMenuLink render={<Link to="/users" />}>사용자 목록</NavigationMenuLink>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
